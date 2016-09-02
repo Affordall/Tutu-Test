@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Tutu Test</string>
+    <string name="app_slogan">The Spirit of Travel</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="nav_menu_schedule">Schedule</string>
+    <string name="nav_menu_about">About Us</string>
+    <string name="nav_menu_send">Send email</string>
+
+    <string name="calendar_date_picker_result_values">%1$s, %2$s, %3$s</string>
+    <string name="search_result_values">Tickets from %1$s to %2$s on %3$s! Have a good trip!</string>
+
+    <string name="settings_checkbox_intro">Show Intro on start</string>
+
+    <string name="dist_from">From</string>
+    <string name="dist_to">To</string>
+    <string name="text_pick_date">Pick a date</string>
+    <string name="btn_search">Search</string>
+
+    <string name="about_dialog_title">@string/app_name</string>
+    <string name="about_dialog_message">Version:</string>
+
+    <string name="emailAddress">affordall@gmail.com</string>
+    <string name="emailSubject">[Feedback]: Tutu Test </string>
+    <string name="emailBody">We appreciate your feedback</string>
+    <string name="sendMail">Send mail&#8230;</string>
+    <string name="noMailClient">There are no email clients installed.</string>
+
+    <string name="share_via">Share via</string>
+    <string name="action_settings">Settings</string>
+    <string name="updating_progress">Updating…</string>
+    <string name="update_complete">Done!</string>
+    <string name="internet_is_off">Internet is not available :(</string>
+    <string name="search_hint">Destination</string>
+    <string name="search_title">Search</string>
+    <string name="no_records">There are no items</string>
+    <string name="wrong_input">Wrong input</string>
+    <string name="search_result">Found: </string>
+</resources>

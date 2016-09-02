@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_city_item"
+    android:background="@color/colorIcons"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/parent_list_item_city_title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorSecondaryText"
+        android:layout_gravity="center_vertical|start"
+        android:padding="16dp"
+        android:textStyle="bold" />
+
+    <!--<ImageButton-->
+        <!--android:id="@+id/parent_list_item_expand_arrow"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_vertical|end"-->
+        <!--android:layout_margin="8dp"-->
+        <!--android:src="@android:drawable/arrow_down_float" />-->
+
+</LinearLayout>

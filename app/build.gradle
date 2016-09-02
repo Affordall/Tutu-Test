@@ -1,4 +1,7 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'realm-android'
 
 android {
     compileSdkVersion 24
@@ -10,12 +13,28 @@ android {
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
+
+        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            zipAlignEnabled true
+            debuggable false
         }
+        debug {
+            minifyEnabled false
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            zipAlignEnabled true
+            debuggable true
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
     }
 }
 
@@ -23,5 +42,40 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.2.0'
+    compile 'com.android.support:recyclerview-v7:24.2.0'
+    compile 'com.android.support:cardview-v7:24.2.0'
+    compile 'com.android.support:support-v4:24.2.0'
     compile 'com.android.support:design:24.2.0'
+
+    // Network
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+
+    // Debug, duh
+    compile 'com.jakewharton.timber:timber:4.1.0'
+
+    // Fancy Intro
+    compile 'com.github.paolorotolo:appintro:4.0.0'
+
+    // Material EditText
+    compile 'com.rengwuxian.materialedittext:library:2.1.4'
+
+    // Date Picker
+    compile 'com.code-troopers.betterpickers:library:3.0.1'
+
+    // Support Java 8 streams
+    compile 'com.annimon:stream:1.1.0'
+
+    // RX
+    compile 'io.reactivex:rxjava:1.1.6'
+    compile 'io.reactivex:rxandroid:1.2.1'
+
+    // DI
+    compile 'com.jakewharton:butterknife:8.2.1'
+    apt 'com.jakewharton:butterknife-compiler:8.2.1'
+    compile 'com.google.dagger:dagger:2.5'
+    apt 'com.google.dagger:dagger-compiler:2.5'
+
+    // Annotations
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+    compile 'org.jetbrains:annotations-java5:15.0'
 }

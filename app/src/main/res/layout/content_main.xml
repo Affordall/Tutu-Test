@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".views.MainActivity"
+    tools:showIn="@layout/app_bar_main"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <android.support.v7.widget.CardView
+        app:cardElevation="@dimen/spacing_medium"
+        app:cardUseCompatPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/et_from"
+                app:met_baseColor="@color/colorPrimaryText"
+                app:met_primaryColor="@color/colorAccent"
+                app:met_floatingLabel="normal"
+                android:layout_margin="@dimen/spacing_large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/dist_from"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/et_to"
+                android:layout_margin="@dimen/spacing_large"
+                app:met_baseColor="@color/colorPrimaryText"
+                app:met_primaryColor="@color/colorAccent"
+                android:hint="@string/dist_to"
+                app:met_floatingLabel="normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/custom_btn_pick_date"
+            android:stateListAnimator="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/button_size"
+            android:layout_margin="@dimen/spacing_large"
+            android:background="@color/colorIcons"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:layout_marginEnd="@dimen/spacing_xsmall"
+                android:layout_marginRight="@dimen/spacing_xsmall"
+                android:src="@drawable/calendar_check" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:text="@string/text_pick_date"
+                android:textColor="@color/colorAccent"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/custom_btn_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/button_size"
+                android:enabled="false"
+                android:elevation="@dimen/spacing_xsmall"
+                android:layout_margin="@dimen/spacing_large"
+                android:background="@drawable/button_round_corners"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:layout_marginEnd="@dimen/spacing_xsmall"
+                    android:layout_marginRight="@dimen/spacing_xsmall"
+                    android:src="@drawable/ic_search_48px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:text="@android:string/search_go"
+                    android:textColor="@color/colorIcons"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tutu Test</string>
+    <string name="btn_search">Поиск</string>
+    <string name="dist_from">Откуда</string>
+    <string name="dist_to">Куда</string>
+    <string name="internet_is_off">Интернет выключен :(</string>
+    <string name="nav_menu_about">О нас</string>
+    <string name="nav_menu_schedule">Расписание</string>
+    <string name="nav_menu_send">Отправить письмо</string>
+    <string name="navigation_drawer_close"></string>
+    <string name="no_records">Ничего не найдено</string>
+    <string name="search_result">Найдено:</string>
+    <string name="search_title">Поиск</string>
+    <string name="share_via">Поделиться через</string>
+    <string name="text_pick_date">Выбрать дату</string>
+    <string name="update_complete">Готово!</string>
+    <string name="updating_progress">Обновление…</string>
+    <string name="wrong_input">Неправильный ввод</string>
+    <string name="calendar_date_picker_result_values">%1$s, %2$s, %3$s</string>
+    <string name="action_settings">Настройки</string>
+    <string name="about_dialog_title">@string/app_name</string>
+    <string name="about_dialog_message">Версия:</string>
+    <string name="search_result_values">Билеты на %3$s, Из %1$s в %2$s! Желаем приятного путешествия!</string>
+    <string name="app_slogan">Дух путешествий</string>
+    <string name="search_hint">Пункт</string>
+    <string name="emailAddress">affordall@gmail.com</string>
+    <string name="emailBody">Нам важно Ваше мнение</string>
+    <string name="emailSubject">[Отзыв]: Tutu Test</string>
+    <string name="sendMail">Отправить письмо…</string>
+    <string name="noMailClient">Нет установленных почтовых приложений</string>
+    <string name="settings_checkbox_intro">Показывать Интро при старте</string>
+</resources>
