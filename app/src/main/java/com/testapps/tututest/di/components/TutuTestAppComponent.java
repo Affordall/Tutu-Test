@@ -33,9 +33,6 @@ public interface TutuTestAppComponent {
     void inject(TutuTestApp app);
     void inject(JsonParser jsonParser);
 
-    void inject(TableCity tableCity);
-    void inject(TableStation tableStation);
-
     void inject(DatabaseHandler handler);
 
     void inject(ChooserActivityPresenterImpl chooserActivityPresenter);

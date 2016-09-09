@@ -9,6 +9,7 @@ import com.testapps.tututest.repository.impl.CityRepository;
 import com.testapps.tututest.specifications.impl.AllCitiesFromListSpecification;
 import com.testapps.tututest.specifications.impl.AllCitiesFromSortedListSpecification;
 import com.testapps.tututest.specifications.impl.AllCitiesToSortedListSpecification;
+import com.testapps.tututest.specifications.impl.SearchSpecification;
 import com.testapps.tututest.views.IChooserActivityView;
 
 import java.util.ArrayList;
@@ -82,6 +83,10 @@ public class ChooserActivityPresenterImpl implements IChooserActivityPresenter {
 
     @Override
     public void getCityById(long id) {
+    }
+
+    public ArrayList<City> resultSearchList(String query) {
+        return (ArrayList<City>) cityRepository.query(new SearchSpecification(query));
     }
 
     private void createObservableCitiesItems(int requestCode) {

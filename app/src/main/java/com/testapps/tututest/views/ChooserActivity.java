@@ -190,26 +190,26 @@ public class ChooserActivity extends BaseActivity implements
 
     /**
      * @param query
-     * Method call search in mAdapter
-     * TODO: Replace for search in DB;
+     * Method call search in SQLite DB
      * @return boolean
      * */
     @Override
     public boolean onQueryTextChange(String query) {
+        hideProgressDialog();
+
         if (query.length() >= 3) {
             query = query.toLowerCase();
-            final ArrayList<City> filteredList = new ArrayList<>();
-            for (int i = 0; i < mAdapter.getItemCount(); i++) {
-                final String text = mAdapter.getCityData(i).getCountryCityTitle().toLowerCase();
-                if (text.contains(query)) {
-                    filteredList.add(mAdapter.getCityData(i));
-                }
+            mAdapter.refresh(presenter.resultSearchList(query));
+
+            if (mAdapter.getItemCount() == 0) {
+                Toast.makeText(ChooserActivity.this, getString(R.string.no_records), Toast.LENGTH_LONG).show();
             }
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(mRecyclerView.getContext()));
-        mAdapter = new CityListAdapter(ChooserActivity.this, null);
-        mRecyclerView.setAdapter(mAdapter);
-        mAdapter.refresh(filteredList);
         }
+
+        if (query.length() == 0) {
+            presenter.parseThemAll(request_code);
+        }
+
         return false;
     }
 

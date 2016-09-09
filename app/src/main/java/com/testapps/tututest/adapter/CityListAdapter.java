@@ -33,7 +33,16 @@ public class CityListAdapter extends RecyclerView.Adapter<CityViewHolder>
     }
 
     public void refresh(final ArrayList<City> listData) {
-        this.mCities = listData;
+        if (mCities != null) {
+            mCities.clear();
+            mCities.addAll(listData);
+        }
+        else {
+            mCities = listData;
+        }
+//        this.mCities.clear();
+//        this.mCities.addAll(listData);
+//        this.mCities = listData;
         notifyDataSetChanged();
     }
 
